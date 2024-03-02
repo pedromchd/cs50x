@@ -1,0 +1,74 @@
+body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: .5rem
+}
+
+.navbar {
+    margin-bottom: .5rem;
+    padding: unset;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: .5rem;
+}
+
+.navbar li {
+    width: 100%;
+}
+
+li a {
+    display: block;
+    width: 100%;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: unset;
+}
+
+main {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+footer {
+    padding-inline: 1rem;
+}
+
+.index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+#me, #cooper {
+    width: 75%;
+}
+
+aside {
+    display: grid;
+    place-items: center;
+}
+
+@media (width <= 650px) {
+    .navbar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .index {
+        grid-template-columns: 1fr;
+    }
+
+    .artist div, .game div, .area div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <div class="multiple">
+                    <h3>How old was Ado when she first released her debut song "Usseewa"?</h3>
+                    <button value="16">16</button>
+                    <button value="17">17</button>
+                    <button value="18">18</button>
+                    <button value="19">19</button>
+                    <button value="20">20</button>
+                    <span id="multiple" class="answer"></span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <div class="free">
+                    <h3>Which country has a flag with a green square, an yellow rhombus and a blue circle?</h3>
+                    <input type="text">
+                    <button>Check Answer</button>
+                    <span id="free" class="answer"></span>
+                </div>
+            </div>
+        </div>
+        <script>
+            buttons = document.querySelectorAll('.multiple button');
+            buttons.forEach(ipt => {
+                ipt.addEventListener('click', evt => {
+                    answer = document.querySelector('#multiple');
+                    buttons.forEach(ipt => ipt.classList.remove('correct', 'incorrect'));
+                    if (evt.target.value == '17') {
+                        ipt.classList.add('correct');
+                        answer.innerText = 'Correct! :D';
+                    } else {
+                        ipt.classList.add('incorrect');
+                        answer.innerText = 'Incorrect :C';
+                    };
+                });
+            });
+
+            btn = document.querySelector('.free button');
+            ipt = document.querySelector('.free input');
+            btn.addEventListener('click', evt => {
+                answer = document.querySelector('#free');
+                ipt.classList.remove('correct', 'incorrect');
+                if (ipt.value.toLowerCase() == 'brazil') {
+                    ipt.classList.add('correct');
+                    answer.innerText = 'Correct! :D';
+                } else {
+                    ipt.classList.add('incorrect');
+                    answer.innerText = 'Incorrect :C';
+                };
+            });
+        </script>
+    </body>
+
+</html>

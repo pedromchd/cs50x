@@ -1,0 +1,22 @@
+HTML tags
+
+header
+nav
+ul
+li
+h1
+main
+article
+section
+p
+footer
+
+CSS properties
+
+display
+padding
+text-decoration
+min-height
+text-align
+
+I used bootstrap to fast style buttons and image cards, and used Javascript to implement a trivia game on my page

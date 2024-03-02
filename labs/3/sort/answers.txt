@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: It took a lowest 5.250s in reversed50000.txt and a fastest 0.635s in sorted50000.txt, an difference similar to big O(n^2) and big Omega(n) in the bubble sort method.
+
+sort2 uses: Merge Sort
+
+How do you know?: It was the fastest and it took an similar amount of time, 0.683s in reversed50000.txt (big O) and 0.764s in sorted50000.txt (big Omega), the Merge sort is the fastest with the same amount of time in big O(n logn) and big Omega(n logn).
+
+sort3 uses: Selection Sort
+
+How do you know?: It has the lowest big Omega, that was the same as its big O, 2.727s in reversed50000.txt (big O) and 2.635s in sorted50000.txt (big Omega), the lowest big Omega its the selection sort with Omega(n^2).
